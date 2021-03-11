@@ -1,12 +1,12 @@
 <template>
   <div class="container">
     <div class="row mb-72">
-      <div class="col-lg-6">
+      <div class="col-lg-6 px-2">
         <span class="projectBlock__topText">{{ data.top_text }}</span>
         <h2 class="projectBlock__title">{{ data.title }}</h2>
       </div>
-      <div class="col-lg-6">
-        <p class="projectBlock__description">{{ data.description }}</p>
+      <div class="col-lg-6 px-2">
+        <p class="projectBlock__description mb-4">{{ data.description }}</p>
         <a class="projectBlock__button" :href="data.button_link">{{
           data.button
         }}</a>
@@ -60,6 +60,8 @@ export default {
     font-size: 15px;
     font-weight: 300;
     letter-spacing: 3px;
+    display: block;
+    margin-bottom: 8px;
   }
   &__title {
     color: #000000;
