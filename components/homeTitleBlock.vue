@@ -1,6 +1,7 @@
 <template>
   <div class="home-TitleBlock">
     <div class="mask"></div>
+    <!-- src="~/static/image/title-block-image.png" -->
     <img
       class="titleBlock__image"
       :src="data.background_image"
