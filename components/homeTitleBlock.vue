@@ -1,7 +1,9 @@
 <template>
-  <div class="home-TitleBlock">
+  <div
+    class="home-TitleBlock"
+    :class="size === 'big' ? 'home-TitleBlock__big' : 'home-TitleBlock__small'"
+  >
     <div class="mask"></div>
-    <!-- src="~/static/image/title-block-image.png" -->
     <img
       class="titleBlock__image"
       :src="data.background_image"
@@ -16,19 +18,64 @@
 </template>
 <script>
 export default {
-  props: ["data"],
+  props: ["data", "size"],
 };
 </script>
 <style lang="scss">
+
+
 .home-TitleBlock {
-  height: 830px;
   position: relative;
+
+  &__big {
+    height: $bigHeight;
+    .mask {
+      height: $bigHeight;
+    }
+    .titleBlock {
+      &__image {
+        height: $bigHeight;
+      }
+      &__content {
+        h1 {
+          font-size: $bigTitleFontS;
+        }
+        h3 {
+          font-size: $bigSubTFontS;
+        }
+      }
+      &__gradient {
+        height: $bigBlockGr;
+      }
+    }
+  }
+  &__small {
+    height: $smallHeight;
+    .mask {
+      height: $smallHeight;
+    }
+    .titleBlock {
+      &__image {
+        height: $smallHeight;
+      }
+      &__content {
+        h1 {
+          font-size: $smallTitleFontS;
+        }
+        h3 {
+          font-size: $smallSubTFontS;
+        }
+      }
+      &__gradient {
+        height: $smallBlockGr;
+      }
+    }
+  }
 
   .mask {
     background-color: #000000;
     opacity: 8;
     width: 100%;
-    height: 828px;
     position: absolute;
     left: 0;
     top: 0;
@@ -40,7 +87,6 @@ export default {
       left: 0;
       top: 0;
       width: 100%;
-      height: 828px;
       object-fit: cover;
       object-position: center;
     }
@@ -50,14 +96,12 @@ export default {
       display: flex;
       align-items: center;
       flex-direction: column;
-      color: #ffffff;
+      color: $colorWhite;
       font-family: "Poppins", sans-serif;
       h1 {
-        font-size: 115px;
         font-weight: 400;
       }
       h3 {
-        font-size: 27px;
         font-weight: 300;
         letter-spacing: 6.75px;
       }
@@ -66,7 +110,6 @@ export default {
       position: absolute;
       width: 100%;
       bottom: -78px;
-      height: 213px;
       background-image: linear-gradient(
         180deg,
         rgba(252, 245, 207, 0) 0%,

@@ -89,7 +89,6 @@ export default {
 </script>
 <style lang="scss">
 .navbar-custom {
-  height: 100px;
   position: absolute;
   z-index: 3;
   font-family: "Helvetica Neue";
@@ -99,34 +98,36 @@ export default {
   line-height: 31px;
   .navLogo {
     margin-left: 40px;
+    margin-top: 9px;
   }
   .navigations-block {
     width: 983px;
-    height: 32px;
     display: flex;
     align-items: center;
     justify-content: space-between;
 
     .selectLang {
-      width: 40px;
-      height: 32px;
-      border: 1px solid #ffffff;
+      border: 1px solid $colorWhite;
       background-image: none;
       padding: 4px 8px;
+      width: auto;
+      height: auto;
       background-color: inherit;
-      color: white;
+      color: $colorWhite;
       border-radius: 0px;
       box-shadow: none;
+      line-height: 1.3;
       option {
         color: black;
+        padding: 5px;
       }
     }
     .menuItem {
-      color: white;
+      color: $colorWhite;
       text-decoration: none;
       box-shadow: none;
       .btn-inherit {
-        color: white;
+        color: $colorWhite;
         box-shadow: none;
         font-size: inherit;
       }

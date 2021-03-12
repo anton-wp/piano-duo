@@ -1,0 +1,28 @@
+$bigHeight: 830px;
+$bigTitleFontS: 115px;
+$bigSubTFontS: 27px;
+$bigBlockGr: 213px;
+
+$smallHeight: 450px;
+$smallTitleFontS: 64px;
+$smallSubTFontS: 15px;
+$smallBlockGr: 100px;
+
+
+$colorRed:  #960000;
+$colorWhite: #ffffff;
+
+@font-face {
+  font-family: "Helvetica Neue";
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("~assets/fonts/HelveticaNeueCyr-Light.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Optima";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("~assets/fonts/Optima.ttf") format("truetype");
+}

@@ -19,6 +19,7 @@ export default {
     ]
   },
 
+
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
   ],
@@ -39,7 +40,15 @@ export default {
     // https://go.nuxtjs.dev/bootstrap
     'bootstrap-vue/nuxt',
     '@nuxtjs/axios',
+    '@nuxtjs/style-resources',
   ],
+  axios: {
+    baseURL: "https://admin.piano-duo.webhikers.dev/wp-json/wp/v2/"
+  },
+
+  styleResources: {
+    scss: './assets/scss/*.scss'
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
